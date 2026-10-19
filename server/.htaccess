@@ -1,0 +1,4 @@
+# Открыт только api.php; остальные файлы серверной части недоступны из браузера
+<FilesMatch "^(config|validation)\.php$">
+    Require all denied
+</FilesMatch>

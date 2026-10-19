@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Админ-панель — Сила и энергия</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Oswald:wght@500;600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/validation.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body data-page="admin">
+  <header class="header">
+    <div class="header__inner">
+      <a class="brand" href="index.html"><img src="images/logo.png" alt="" width="40" height="40">Сила и энергия</a>
+      <nav class="nav" aria-label="Основное меню">
+      <a href="index.html">Главная</a>
+      <a href="application.html" data-auth="user">Заявка</a>
+      <a href="cabinet.html" data-auth="user">Мои заявки</a>
+      <a href="admin.html" data-auth="admin" aria-current="page">Админ-панель</a>
+      <a href="login.html" data-auth="guest">Войти</a>
+      <a href="register.html" data-auth="guest">Регистрация</a>
+      <a href="#" data-auth="user" id="logout">Выйти</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <h1>Заявки клиентов</h1>
+    <div class="toolbar">
+      <label class="label" for="status-filter">Фильтр по статусу</label>
+      <select class="field" id="status-filter"><option value="">Все статусы</option></select>
+    </div>
+    <div class="requests-cards" id="requests-cards"></div>
+    <table class="requests-table" id="requests-table">
+      <thead><tr><th>Клиент</th><th>Направление</th><th>Дата</th><th>Оплата</th><th>Статус</th><th>Сменить статус</th></tr></thead>
+      <tbody id="requests-body"></tbody>
+    </table>
+    <div class="empty" id="admin-empty" hidden>
+      <img src="images/empty.webp" alt="Шейкер и гантель на полу" width="352" height="198" loading="lazy">
+      <p>Заявок с таким статусом нет.</p>
+    </div>
+  </main>
+</body>
+</html>

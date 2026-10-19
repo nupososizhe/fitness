@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Главная — Сила и энергия</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Oswald:wght@500;600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/validation.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body data-page="index">
+  <header class="header">
+    <div class="header__inner">
+      <a class="brand" href="index.html"><img src="images/logo.png" alt="" width="40" height="40">Сила и энергия</a>
+      <nav class="nav" aria-label="Основное меню">
+      <a href="index.html" aria-current="page">Главная</a>
+      <a href="application.html" data-auth="user">Заявка</a>
+      <a href="cabinet.html" data-auth="user">Мои заявки</a>
+      <a href="admin.html" data-auth="admin">Админ-панель</a>
+      <a href="login.html" data-auth="guest">Войти</a>
+      <a href="register.html" data-auth="guest">Регистрация</a>
+      <a href="#" data-auth="user" id="logout">Выйти</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <img src="images/hero.webp" alt="Тренажёрный зал с беговыми дорожками и гантелями" width="800" height="300">
+      <div class="hero__text">
+        <h1>Сила и энергия</h1>
+        <p>Тренажёры, кардио, растяжка и удобная раздевалка. Запишитесь на первую тренировку онлайн.</p>
+        <a class="btn" href="application.html">Записаться</a>
+      </div>
+    </section>
+    <h2>Направления</h2>
+    <div class="catalog" id="catalog" aria-live="polite"></div>
+  </main>
+</body>
+</html>

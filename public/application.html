@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Заявка — Сила и энергия</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Oswald:wght@500;600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/validation.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body data-page="application">
+  <header class="header">
+    <div class="header__inner">
+      <a class="brand" href="index.html"><img src="images/logo.png" alt="" width="40" height="40">Сила и энергия</a>
+      <nav class="nav" aria-label="Основное меню">
+      <a href="index.html">Главная</a>
+      <a href="application.html" data-auth="user" aria-current="page">Заявка</a>
+      <a href="cabinet.html" data-auth="user">Мои заявки</a>
+      <a href="admin.html" data-auth="admin">Админ-панель</a>
+      <a href="login.html" data-auth="guest">Войти</a>
+      <a href="register.html" data-auth="guest">Регистрация</a>
+      <a href="#" data-auth="user" id="logout">Выйти</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="panel">
+      <h1>Запись на тренировку</h1>
+      <form id="application-form" novalidate>
+        <label class="label" for="workout_id">Направление</label>
+        <select class="field" id="workout_id" name="workout_id"><option value="">Выберите направление</option></select>
+        <div class="error-text" data-error-for="workout_id" role="alert"></div>
+
+        <label class="label with-icon" for="desired_date"><img src="images/icon-calendar.png" alt="" width="28" height="28">Желаемая дата</label>
+        <input class="field" id="desired_date" name="desired_date" type="date">
+        <div class="error-text" data-error-for="desired_date" role="alert"></div>
+
+        <label class="label with-icon" for="payment_id"><img src="images/icon-card.png" alt="" width="28" height="28">Способ оплаты</label>
+        <select class="field" id="payment_id" name="payment_id"><option value="">Выберите способ оплаты</option></select>
+        <div class="error-text" data-error-for="payment_id" role="alert"></div>
+
+        <div class="error-text" id="form-error" role="alert"></div>
+        <div class="form-actions"><button class="btn" type="submit">Отправить</button></div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

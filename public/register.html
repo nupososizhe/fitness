@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Регистрация — Сила и энергия</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Oswald:wght@500;600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/validation.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body data-page="register" class="auth">
+  <header class="header">
+    <div class="header__inner">
+      <a class="brand" href="index.html"><img src="images/logo.png" alt="" width="40" height="40">Сила и энергия</a>
+      <nav class="nav" aria-label="Основное меню">
+      <a href="index.html">Главная</a>
+      <a href="application.html" data-auth="user">Заявка</a>
+      <a href="cabinet.html" data-auth="user">Мои заявки</a>
+      <a href="admin.html" data-auth="admin">Админ-панель</a>
+      <a href="login.html" data-auth="guest">Войти</a>
+      <a href="register.html" data-auth="guest" aria-current="page">Регистрация</a>
+      <a href="#" data-auth="user" id="logout">Выйти</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="panel">
+      <h1>Регистрация</h1>
+      <form id="register-form" novalidate>
+      <label class="label" for="login">Логин</label>
+      <input class="field" id="login" name="login" type="text" placeholder="Latin123" autocomplete="username">
+      <div class="error-text" data-error-for="login" role="alert"></div>
+      <label class="label" for="password">Пароль</label>
+      <input class="field" id="password" name="password" type="password" placeholder="Не менее 8 символов" autocomplete="new-password">
+      <div class="error-text" data-error-for="password" role="alert"></div>
+      <label class="label" for="full_name">ФИО</label>
+      <input class="field" id="full_name" name="full_name" type="text" placeholder="Иванов Иван Иванович" autocomplete="name">
+      <div class="error-text" data-error-for="full_name" role="alert"></div>
+      <label class="label" for="phone">Телефон</label>
+      <input class="field" id="phone" name="phone" type="tel" placeholder="8(900)123-45-67" autocomplete="tel">
+      <div class="error-text" data-error-for="phone" role="alert"></div>
+      <label class="label" for="email">Почта</label>
+      <input class="field" id="email" name="email" type="email" placeholder="ivan@mail.ru" autocomplete="email">
+      <div class="error-text" data-error-for="email" role="alert"></div>
+        <div class="error-text" id="form-error" role="alert"></div>
+        <div class="form-actions"><button class="btn" type="submit">Зарегистрироваться</button></div>
+      </form>
+      <p class="panel__link">Уже есть аккаунт? <a href="login.html">Войти</a></p>
+    </section>
+  </main>
+</body>
+</html>
